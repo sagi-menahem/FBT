@@ -67,9 +67,10 @@
 
 **FBT Israel** (קולתאורה) is the production storefront for the official Israeli
 importer of **FBT Elettronica**, an Italian professional audio manufacturer since
-1963. Built end-to-end as the sole engineer. The codebase itself is private — this
-README is the portfolio-facing summary covering the architecture, engineering
-decisions, and screenshots that I can share publicly.
+1963. Built for Agentical (agentical.agency) as their client's platform — I was the
+sole engineer on the codebase. The source itself is private — this README is the
+portfolio-facing summary covering the architecture, engineering decisions, and
+screenshots that I can share publicly.
 
 The site is bilingual — Hebrew (default, RTL) and English (LTR), toggled client-side
 with no page reload. Unlike a typical single-market storefront, every user-facing
@@ -80,7 +81,7 @@ hardcoded, so the two languages stay in lockstep as the catalog grows.
 
 ## How This Was Built
 
-Built solo, **AI-first**: I orchestrate AI coding agents (Claude Code, Codex) through a documented methodology rather than writing every line by hand — the engineering discipline is the point, not the speed.
+**AI-first**: I orchestrate AI coding agents (Claude Code, Codex) through a documented methodology rather than writing every line by hand — the engineering discipline is the point, not the speed.
 
 - **`AGENTS.md` as the single source of truth** — a rules file in the repo defines the architecture, conventions, and hard constraints every agent must obey: money never in floats, every user-facing string routed through the bilingual i18n system (no hardcoded strings), independent server-side verification of every Tranzila payment before an order is marked paid.
 - **Guardrail scripts & audit pipelines** — automated checks run on every change (RTL/LTR and i18n correctness, Server Action authorization, transactional-money rules), so quality is enforced by tooling, not vigilance.
