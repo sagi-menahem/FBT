@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
   <h1>FBT Israel</h1>
   <p><strong>Bilingual E-Commerce Storefront — Hebrew RTL + English</strong></p>
   <p>A production Next.js 16 e-commerce platform built and shipped end-to-end for the official Israeli importer of FBT Elettronica, an Italian professional audio brand. Real card payments, a custom admin CMS, and full Hebrew/English RTL support — deployed on Vercel.</p>
@@ -81,13 +81,7 @@ hardcoded, so the two languages stay in lockstep as the catalog grows.
 
 ## How This Was Built
 
-**AI-first**: I orchestrate AI coding agents (Claude Code, Codex) through a documented methodology rather than writing every line by hand — the engineering discipline is the point, not the speed.
-
-- **`AGENTS.md` as the single source of truth** — a rules file in the repo defines the architecture, conventions, and hard constraints every agent must obey: money never in floats, every user-facing string routed through the bilingual i18n system (no hardcoded strings), independent server-side verification of every Tranzila payment before an order is marked paid.
-- **Guardrail scripts & audit pipelines** — automated checks run on every change (RTL/LTR and i18n correctness, Server Action authorization, transactional-money rules), so quality is enforced by tooling, not vigilance.
-- **The engineer decides, the agent executes** — every schema, payment flow, and architectural choice on this page was designed and reviewed by me. Agents accelerate implementation; they never own the design.
-
-The result: one engineer delivering a production system at team-level velocity — with the discipline the decisions below reflect.
+Built AI-first: I orchestrate AI coding agents (Claude Code, Codex) under guardrail scripts and audit pipelines that run on every change — but every schema, payment flow, and architectural decision here was designed and reviewed by me. Agents accelerate implementation; they don't own the design.
 
 ---
 
