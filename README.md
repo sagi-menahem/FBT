@@ -77,13 +77,6 @@ with no page reload. Unlike a typical single-market storefront, every user-facin
 string, layout direction, and font is driven through a single i18n system rather than
 hardcoded, so the two languages stay in lockstep as the catalog grows.
 
----
-
-## How This Was Built
-
-Built AI-first: I orchestrate AI coding agents (Claude Code, Codex) under guardrail scripts and audit pipelines that run on every change — but every schema, payment flow, and architectural decision here was designed and reviewed by me. Agents accelerate implementation; they don't own the design.
-
----
 
 ## Highlights
 
